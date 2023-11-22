@@ -30,8 +30,8 @@ mutation {
 ```graphql
 query {
     all_users {
-		id
- 		name
+	id
+ 	name
   }
 }
 ```
@@ -67,7 +67,7 @@ query{
 - Update a specific user based on their id and return the updated record 
 ```graphql
 mutation {
-   update_user(id: 2, name: "Robin Hood",	email: "robinhood@testing.com")
+   update_user(id: 2, name: "Robin Hood", email: "robinhood@testing.com")
   {
     id
     name

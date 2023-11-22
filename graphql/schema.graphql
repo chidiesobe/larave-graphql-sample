@@ -1,0 +1,20 @@
+# User models activities
+type User {
+    id: ID!
+    name: String!
+    email: String!
+}
+
+type Query{
+    welcome: String!
+    all_users: [User!] @all
+    users: [User!] @paginate
+    user(id: ID! @eq) : User @find
+}
+
+type Mutation{
+    create_user(name: String!, email: String!, password: String!): User! @create
+    update_user(id: ID!, name: String, email: String, password: String): User! @update
+    delete_user(id: [ID!] @whereKey, name: String @eq): [User!]! @delete
+}
+
